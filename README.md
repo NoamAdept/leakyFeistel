@@ -5,6 +5,8 @@ This project demonstrates a vulnerability in a Feistel cipher implementation tha
 
 ![Exploit Diagram](https://github.com/user-attachments/assets/dd98abc9-39cc-450e-a1f2-a2199e39cecc)
 
+Suppose that $k_1 =  k_2 =  ... k_r \in \mathbb{R}$
+
 ## Overview
 
 The vulnerability arises when the attacker sends a specially crafted plaintext block with the left half set to zero. In the first round of the Feistel cipher, the computation simplifies to:
@@ -13,7 +15,7 @@ $$
 L_1 = R_0,\quad R_1 = L_0 \oplus F(R_0, k) = F(R_0, k)
 $$
 
-Since \(L_0 = 0\), the output of the round function, \(F_0 = F(R_0, k)\), is directly exposed (for example, via debug output). The round function is defined as:
+Since $L_0 = 0$, the output of the round function, $F_0 = F(R_0, k)$, is directly exposed (for example, via debug output). The round function is defined as:
 
 $$
 F(R_0, k) = (R_0 \oplus k) + (R_0 \ll 1)
