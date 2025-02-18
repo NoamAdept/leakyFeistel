@@ -3,11 +3,11 @@
 
 This project demonstrates a vulnerability in a Feistel cipher implementation that uses a fixed key for all rounds (i.e., no key scheduling). By carefully choosing the plaintext input, an attacker can recover the key from leaked intermediate values and subsequently decrypt any ciphertext produced by the cipher.
 
+## Overview
+
 ![Exploit Diagram](https://github.com/user-attachments/assets/dd98abc9-39cc-450e-a1f2-a2199e39cecc)
 
 Suppose that $k_1 =  k_2 =  ... k_r \in \mathbb{R}$
-
-## Overview
 
 The vulnerability arises when the attacker sends a specially crafted plaintext block with the left half set to zero. In the first round of the Feistel cipher, the computation simplifies to:
 
