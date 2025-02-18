@@ -74,10 +74,9 @@ This will simulate the chosen‑plaintext attack, recover the key, and print the
 
 ## How might I exploit this Feistel?
 
-<details open>
-<summary>Want to ruin the surprise?</summary>
-<br>
-Well, you asked for it!
+<details>
+<img width="496" alt="image" src="https://github.com/user-attachments/assets/ca983742-e0bd-495f-81bd-0bfa9bc2432e" />
+
 </details>
 
 
