@@ -1,6 +1,3 @@
-Below is the updated, more professional README file that includes build and run instructions, an overview of the vulnerability, and details on the exploit:
-
----
 
 # Feistel Cipher Key Recovery Exploit
 
