@@ -10,20 +10,18 @@ The vulnerability arises when the attacker sends a specially crafted plaintext b
 $L_1 = R_0,\quad R_1 = L_0 \oplus F(R_0,k) = F(R_0,k)$
 
 
-Since \(L_0 = 0\), the output of the round function, \(F_0 = F(R_0,k)\), is directly exposed (e.g., via debug output). The round function is defined as:
+Since $L_0 = 0$, the output of the round function, $F_0 = F(R_0,k)$, is directly exposed (e.g., via debug output). The round function is defined as:
 
-\[
-F(R_0,k) = (R_0 \oplus k) + (R_0 \ll 1)
-\]
+
+$F(R_0,k) = (R_0 \oplus k) + (R_0 \ll 1)$
 
 Rearranging the equation yields:
 
-\[
+$$
 R_0 \oplus k = F_0 - (R_0 \ll 1)
-\]
-\[
 \Rightarrow k = R_0 \oplus \bigl(F_0 - (R_0 \ll 1)\bigr)
-\]
+$$
+
 
 This relationship allows an attacker to recover the key and subsequently decrypt any ciphertext produced by the cipher.
 
