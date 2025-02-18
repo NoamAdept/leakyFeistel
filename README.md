@@ -6,7 +6,7 @@ This project demonstrates a vulnerability in a Feistel cipher implementation tha
 ## Overview
 
 ![Exploit Diagram](https://github.com/user-attachments/assets/dd98abc9-39cc-450e-a1f2-a2199e39cecc)
-Source: Joy of Cryptography
+\n Source: Joy of Cryptography
 
 Suppose that $k_1 =  k_2 =  ... k_r \in \mathbb{R}$
 
