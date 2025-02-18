@@ -32,19 +32,6 @@ $$
 
 This relationship allows an attacker to recover the key and decrypt any ciphertext produced by the cipher.
 
-## Components
-
-- **Vulnerable Cipher Module:**  
-  Contains the implementation of the Feistel cipher with a fixed key.
-
-- **Challenge Oracle:**  
-  Provides an interactive environment where users can input 8-byte hex plaintexts and view how they are encrypted (with debug output).
-
-- **Attacker Exploit:**  
-  Demonstrates how to recover the key using leaked information from the cipher, and then decrypts a secret message (flag).
-
-- **Diagram:**  
-  A visual representation of the attack is provided in the embedded diagram above.
 
 ## How to Build and Run
 
@@ -83,4 +70,18 @@ In another terminal, execute:
 ```
 
 This will simulate the chosen‑plaintext attack, recover the key, and print the decrypted flag.
+
+
+## How might I exploit this Feistel?
+
+<details open>
+<summary>Want to ruin the surprise?</summary>
+<br>
+Well, you asked for it!
+</details>
+
+
+
+
+
 
