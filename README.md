@@ -9,21 +9,21 @@ This project demonstrates a vulnerability in a Feistel cipher implementation tha
 
 The vulnerability arises when the attacker sends a specially crafted plaintext block with the left half set to zero. In the first round of the Feistel cipher, the computation simplifies to:
 
-\[
+$$
 L_1 = R_0,\quad R_1 = L_0 \oplus F(R_0, k) = F(R_0, k)
-\]
+$$
 
 Since \(L_0 = 0\), the output of the round function, \(F_0 = F(R_0, k)\), is directly exposed (for example, via debug output). The round function is defined as:
 
-\[
+$$
 F(R_0, k) = (R_0 \oplus k) + (R_0 \ll 1)
-\]
+$$
 
 Rearranging the equation yields:
 
-\[
+$$
 R_0 \oplus k = F_0 - (R_0 \ll 1) \quad \Rightarrow \quad k = R_0 \oplus \bigl(F_0 - (R_0 \ll 1)\bigr)
-\]
+$$
 
 This relationship allows an attacker to recover the key and decrypt any ciphertext produced by the cipher.
 
